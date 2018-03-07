@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tooltips Tutorial</title>
+	<style type="text/css">
+	    body{text-align: center;}
+
+	    /* Main Tooltip Div */
+		.tooltip{
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			margin-top: 100px;
+		}
+
+		/* Main Tooltip Span */
+		.tooltip .tooltip-text{
+			visibility: hidden;
+			position: absolute;
+			
+			width: 200px;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+
+            z-index: 1;
+		}
+
+        /* Tooltip Right */
+        .tooltip.t-right .tooltip-text{
+            left: 110%;
+        }
+
+        /* Tooltip Bottom */
+        .tooltip.t-bottom .tooltip-text{
+            bottom: -200%;
+            right: -70%;
+        }
+
+        /* Tooltip Left */
+        .tooltip.t-left .tooltip-text{
+            left: -293%;
+        }
+
+        /* Tooltip Top */
+        .tooltip.t-top .tooltip-text{
+            left: -93%;
+            top: -200%;
+        }
+
+        /* Tooltip Hover Triger */
+		.tooltip:hover .tooltip-text{
+			visibility: visible;
+		}
+
+
+	</style>
+</head>
+<body>
+    <div class="tooltip t-right"> Tooltip Right
+    	<span class="tooltip-text">This is text.</span>
+    </div>
+    
+    <br>
+    <div class="tooltip t-bottom"> Tooltip Bottom
+    	<span class="tooltip-text">This is text.</span>
+    </div>
+
+    <br>
+    <div class="tooltip t-left"> Tooltip Left
+    	<span class="tooltip-text">This is text.</span>
+    </div>
+
+    <br>
+    <div class="tooltip t-top"> Tooltip Top
+    	<span class="tooltip-text">This is text.</span>
+    </div>
+</body>
+</html>
